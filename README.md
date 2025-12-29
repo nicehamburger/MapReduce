@@ -49,7 +49,7 @@ To remove object files and the executable
 make clean
 ```
 
-## Usage
+### Usage
 To use API for your own program
 1. Define Mapper and Reducer. 
    You must implement the logic for your specific data processing task:
