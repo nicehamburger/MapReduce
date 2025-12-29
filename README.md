@@ -1,18 +1,6 @@
-# MapReduce Framework with SJF Thread Pool
+# MapReduce Library
 
 A multi-threaded **MapReduce** library implemented in **C**, designed for parallel data processing. This project leverages a custom-built **thread pool** that uses **Shortest Job First (SJF)** scheduling to optimize task throughput.
-
-## Features
-- **Custom Thread Pool**  
-  Handles multiple worker threads for concurrent task execution.
-- **Shortest Job First Scheduling**  
-  Tasks are scheduled based on their estimated weight (e.g., file size) to improve throughput.
-- **Thread-Safe MapReduce**  
-  Supports concurrent mappers and reducers with mutex-protected partitions.
-- **Dynamic Partitioning**  
-  Key-value pairs are distributed across partitions and sorted for efficient reduction.
-- **Easy-to-Use API**  
-  Simple functions to submit map and reduce tasks.
 
 ## Architecture
 
@@ -41,8 +29,6 @@ The framework consists of two main components:
   - Uses `MR_Partitioner` (hash function) to distribute keys across partitions.
   - Each partition has a mutex for safe concurrent access.
 
----
-
 ## Getting Started
 
 ### Prerequisites
@@ -63,11 +49,6 @@ To remove object files and the executable
 make clean
 ```
 
-## Thread Safety
-- Each partition has its own mutex to allow concurrent insertion and reduction.
-- The thread pool uses mutex and condition variables to synchronize job queue access.
-- Worker threads are blocked when no jobs are available, preventing busy-waiting.
-
 ## Usage
 To use API for your own program
 1. Define Mapper and Reducer
@@ -85,6 +66,10 @@ void my_reducer(char* key, unsigned int partition_idx) {
    Call MR_Run from your main function:
 ```
 MR_Run(file_count, file_names, my_mapper, my_reducer, num_workers, num_partitions);
+```
+3. main.c is your driver program that provides mapper and reducer functions.
+```bash
+gcc -pthread -o mapreduce mapreduce.c threadpool.c main.c
 ```
 
 ## Notes
