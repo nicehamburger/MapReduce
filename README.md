@@ -2,19 +2,6 @@
 
 A multi-threaded **MapReduce** library implemented in **C**, designed for parallel data processing. This project leverages a custom-built **thread pool** that uses **Shortest Job First (SJF)** scheduling to optimize task throughput.
 
----
-
-## Table of Contents
-- [Features](#features)  
-- [Architecture](#architecture)  
-- [Getting Started](#getting-started)  
-- [Usage](#usage)  
-- [API](#api)  
-- [Thread Safety](#thread-safety)  
-- [License](#license)  
-
----
-
 ## Features
 - **Custom Thread Pool**  
   Handles multiple worker threads for concurrent task execution.
@@ -26,8 +13,6 @@ A multi-threaded **MapReduce** library implemented in **C**, designed for parall
   Key-value pairs are distributed across partitions and sorted for efficient reduction.
 - **Easy-to-Use API**  
   Simple functions to submit map and reduce tasks.
-
----
 
 ## Architecture
 
