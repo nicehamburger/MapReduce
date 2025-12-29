@@ -78,6 +78,5 @@ gcc -pthread -o mapreduce mapreduce.c threadpool.c main.c
 - All intermediate data is automatically cleaned up after the Reduce phase, but careful memory management in Mapper and Reducer is recommended.
 
 ## Acknowledgements
-
-The `mapreduce.h` header and associated scaffolding were provided as part of the CMPUT 379: Operating Systems Concepts course at the University of Alberta.  
-All threading logic, SJF scheduling, and MapReduce implementation beyond the provided header were developed by the project author.
+- The `mapreduce.h` header and associated scaffolding were provided as part of the CMPUT 379: Operating Systems Concepts course at the University of Alberta.  
+- All threading logic, SJF scheduling, and MapReduce implementation beyond the provided header were developed by the project author.
