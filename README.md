@@ -51,7 +51,7 @@ make clean
 
 ## Usage
 To use API for your own program
-1. Define Mapper and Reducer
+1. Define Mapper and Reducer. 
    You must implement the logic for your specific data processing task:
 ```
 void my_mapper(char* file_name) {
@@ -62,7 +62,7 @@ void my_reducer(char* key, unsigned int partition_idx) {
     // Use MR_GetNext(key, partition_idx) to process values
 }
 ```
-2. Run the Framework
+2. Run the Framework. 
    Call MR_Run from your main function:
 ```
 MR_Run(file_count, file_names, my_mapper, my_reducer, num_workers, num_partitions);
