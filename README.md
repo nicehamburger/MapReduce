@@ -50,15 +50,15 @@ The framework consists of two main components:
 - Unix-like OS recommended (Linux, macOS).
 
 ### Compilation
--  To compile the library and the test program using the provided Makefile:
+To compile the library and the test program using the provided Makefile
 ```bash
 make
 ```
-- Pass the files you wish to process as command-line arguments:
+Pass the files you wish to process as command-line arguments
 ```bash
 ./test_wc file1.txt file2.txt file3.txt
 ```
-- To remove object files and the executable
+To remove object files and the executable
 ```bash
 make clean
 ```
