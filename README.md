@@ -42,7 +42,7 @@ make
 ```
 Pass the files you wish to process as command-line arguments
 ```bash
-./test_wc file1.txt file2.txt file3.txt
+./test_wc file1.txt file2.txt
 ```
 To remove object files and the executable
 ```bash
